@@ -5,7 +5,7 @@ node ('ubuntu'){
   }
 
   stage('Build-and-Tag'){
-    app=docker.build("sphalerud/DockerTIMP")
+    app=docker.build("sphalerud/dockertimp")
   }
   stage('Post-to-dockerhub'){
     docker.withRegistry('https://registry.hub.docker.com','dockerhub_creds'){
